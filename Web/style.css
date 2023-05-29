@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --green: #43aa8b;
+    --red: #bc4749;
+}
+
+body{
+    background-color: #edf6f9;
+    font-family: 'Andika New Basic', sans-serif;
+    color: #2f3e46;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.budgetNum{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    max-width: 700px;
+    margin: 1rem 0 3rem;
+    /* background-color: black; */
+}
+
+.numbers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.amount__container{
+    display: flex;   
+}
+
+#amount_earned,#earnedSymbol{color: var(--green);}
+#amount_spent,#spentSymbol{color: var(--red);}
+
+.input_area input{
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    /* outline: none; */
+}
+
+.input_area #description{
+    width: 330px;
+}
+
+.input_area #amount{
+    width: 70px;
+    text-align: center;
+}
+
+/* remove arrows from number input */
+.input_area input::-webkit-outer-spin-button,
+.input_area input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.buttons_area{
+    margin: 10px 0 3rem;
+    /* background-color: black; */
+}
+
+.buttons_area #add_income,
+.buttons_area #add_expense{
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+#add_income{background-color: var(--green);}
+#add_expense{background-color: var(--red);}
+
+.items_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 70%;
+    max-width: 700px;
+}
+
+#income_container h2{color: var(--green);}
+#expenses_container h2{color: var(--red);}
+
+.items_container .container{
+    width: 49%;
+    border-radius: 15px;
+}
+
+.container .items{
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 40px 5px 30px;
+    position: relative;
+}
+
+.item_income,
+.item_expense{
+    display: flex;
+}
+
+.income span, .income p{color: var(--green);}
+.expense span, .expense p{color: var(--red);}
+
+.items .far{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--red);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    transform: translate(30px);
+    opacity: 0;
+}
+
+.items:hover .far{
+    animation: showDelete;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards; /*MANTIENE L'ULTIMO STATO DELL'ANIMAZIONE QUINDI LA SUA POSIZIONE FINALE LA DECIDE L'ANIMAZIONE*/
+}
+
+@keyframes showDelete{
+    0%{
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

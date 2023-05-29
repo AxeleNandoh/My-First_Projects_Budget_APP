@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Anno 2023</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="budgetNum">
+
+            <div class="numbers" id="earned">
+                <small>Guadagni</small>
+                <div class="amount_Container">
+                    <p id="earnedSymbol">€</p>
+                    <span id="amount_earned">1000 €</span>
+                </div>
+            </div>
+
+            <div class="numbers" id="available">
+                <small>Bilancio</small>
+                <div class="amount_Container">
+                    <p>€</p>
+                    <span id="amount_available">1000 €</span>
+                </div>
+            </div>
+
+            <div class="numbers" id="spent">
+                <small>Spese</small>
+                <div class="amount_Container">
+                    <p id="spentSymbol">€</p>
+                    <span id="amount_spent">1000 €</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="input_area">
+            <input type="text" id="description" placeholder="description">
+            <input type="number" id="amount" placeholder="amount">
+        </div>
+
+        <div class="buttons_area">
+            <button id="add_income">Add Income</button>
+            <button id="add_expense">Add Expense</button>
+        </div>
+
+        <div class="items_container">
+            
+            <div id="income_container" class="container">
+                <h2>Entrate</h2>
+
+                <div class="items income">
+
+                    <h4>Venduto</h4>
+
+                    <div class="item_income">
+                        <p class="symbol">€</p>
+                        <span id="income_amount">3900</span>
+                    </div>
+
+                    <i class="far fa-trash-alt"></i>
+
+                </div>
+
+            </div>
+
+            <div id="expenses_container" class="container">
+                <h2>Acquisti</h2>
+
+                <div class="items expense">
+
+                    <h4>Speso</h4>
+
+                    <div class="item_expense">
+                        <p class="symbol">€</p>
+                        <span id="expense_amount">1200</span>
+                    </div>
+
+                    <i class="far fa-trash-alt"></i>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
